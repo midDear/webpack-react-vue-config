@@ -1,0 +1,38 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",        // 使用未来的语法
+            {
+                "useBuiltIns": "usage", // 在每个文件中使用polyfill时，为polyfill添加特定导入。利用捆绑器只加载一次相同的polyfill。
+                "corejs": 2,
+                "modules": false, // 启用将ES6模块语法转换为其他模块类型，设置为false不会转换模块。
+                "targets": {
+                    "browsers": ["> 1%", "last 2 versions", "not ie <= 8"]
+                   }
+            },
+        ]
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                "helpers": false,
+                "corejs": 2
+            }
+        ]
+    ]
+}
+//babel配置文件
+
+// npm install --save-dev @babel/core @babel/preset-env babel-loader
+// npm install --save-dev  @babel/plugin-transform-runtime @babel/runtime-corejs2
+// npm install --save  core-js  @babel/runtime
+
+
+// npm install --save-dev style-loader css-loader
+// npm install --save-dev file-loader
+// npm install --save-dev csv-loader xml-loader
+
+
+
+

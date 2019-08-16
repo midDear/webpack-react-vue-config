@@ -4,7 +4,6 @@ strMap.set("1","dd1")
 strMap.set("2","dd")
 strMap.set("3","dd")
 strMap.set("5","dd")
-strMap.set("4","dd11111")
 
 function randomStr() {
     return Math.random().toString(36).substr(2)
